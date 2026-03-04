@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import pytest
 import time
 
-BASE_URL = "https://www.saucedemo.com"
+BASE_URL = "https://www.demo.com"
 
 
 def setup_driver():
@@ -30,7 +30,7 @@ def test_user_login():
     driver.get(BASE_URL)
 
     driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    driver.find_element(By.ID, "password").send_keys("secret_sauce")
+    driver.find_element(By.ID, "password").send_keys("wrong_password")
     driver.find_element(By.ID, "login-button").click()
 
     assert "inventory" in driver.current_url
