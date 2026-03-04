@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import pytest
 import time
 
-BASE_URL = "https://www.demo.com"
+BASE_URL = "https://www.saucedemo.com"
 
 
 def setup_driver():
